@@ -1,0 +1,35 @@
+@import '~/node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Commons */
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utility */
+
+// Color Background
+.bg_header {
+    background-color: #2E3A46;
+}
+
+// Colore di Background
+.bg_main {
+    background-color: #1E2D3B;
+}
+
