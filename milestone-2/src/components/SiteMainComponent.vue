@@ -25,7 +25,7 @@ export default {
      },
      data () {
          return {
-             link: "http://localhost/PHP/esercitazioni-git-php/php-ajax-dischi/milestone-1/db.php",
+             link: "http://localhost/PHP/esercitazioni-git-php/php-ajax-dischi/milestone-2/src/db.php",
              albums: null,
              loading: true,
         };
