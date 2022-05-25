@@ -1,9 +1,7 @@
 <?php
 
 $albums = [
-    'success' => true,
-    'response' => [
-        [
+           [
             'poster' =>	"https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
             'title'	=> "New Jersey",
             'author' =>	"Bon Jovi",
@@ -82,10 +80,63 @@ $albums = [
             'genre' => "Pop",
             'year' =>	"1987",
             ],
-    ]
 ];
 
 //var_dump($albums);
-header('Content-Type: application/json');
+/* header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-echo json_encode($albums);
+echo json_encode($albums); */
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Milestone-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main {
+            height: 1000px;
+        }
+        img {
+            max-width: 100%;
+        }
+        h6 {
+            margin-top: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <main class='bg-dark'>
+        <div class="container w-75 h-75 bg-dark">
+            <div class="row row-cols-5 p-5 g-3 justify-content-center">
+                <?php foreach ($albums as $album) : ?>
+                    <div class="col text-center">
+                       <div class="card p-3 bg-primary">
+                            <img height='155' src="<?php echo $album['poster'] ?>" alt="">
+                            <h6 class='text-white'>
+                                <?php echo $album['title'] ?>
+                            </h6>
+                            <p>
+                                <?php echo $album['author'] ?>
+                            </p>
+                            <small>
+                                <?php echo $album['year'] ?>
+                            </small>
+                            </div>
+                    </div>
+                <?php  endforeach; ?>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
